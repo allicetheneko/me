@@ -4,7 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: linear-gradient(to bottom, #ff6347, #dc143c);
+    background-color: #282c34;
 }
 
 .container {
@@ -15,24 +15,70 @@ body {
     text-align: center;
 }
 
-.about, .skills, .projects, .contact {
-    margin-bottom: 60px;
-}
-
-.profile {
-  opacity: 0; 
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
-}
-
 .profile img {
     max-width: 200px;
     height: auto;
-    border-radius: 50%;
+    border-radius: 50% / 60%;
 }
 
-.profile.slide-in-left {
-  opacity: 1;
-  transform: translateX(0); 
+.profile table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.profile td {
+    vertical-align: middle;
+    padding: 10px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block; 
+    margin: 0 10px;
+    color: #ff69b4;
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+}
+
+.about, .skills, .projects, .contact {
+    margin-bottom: 60px;  
+}
+
+h1, h2 {
+    color: #ff69b4;
+}
+
+a {
+    color: #ff69b4;
+}
+
+.divider p {
+    color: #ff69b4; 
+    font-weight: bold; 
+    text-shadow: 0 0 10px #ff69b4;
+}
+
+.card {
+    background-color: #21252b;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+}
+
+.card-title {
+    color: #ff69b4;
+    margin-bottom: 15px; 
+}
+
+.card-body {
+    padding: 30px; 
 }
 
 .contact ul {
@@ -41,21 +87,11 @@ body {
 }
 
 .contact a {
-    color: #333; 
     text-decoration: none; 
 }
 
 .contact a:hover {
     text-decoration: underline; 
-}
-
-.divider {
-    text-align: center;
-    margin: 20px 0; 
-}
-
-.divider p {
-    color: #ddd; 
 }
 
 .skills li:hover {
@@ -83,12 +119,6 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-}
-
 .progress {
   margin-top: 5px; 
   height: 10px; 
@@ -98,4 +128,20 @@ body {
 
 .progress-bar {
   background-color: #f08080; 
+}
+
+.profile {
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
+}
+  
+.profile.slide-in-left {
+  opacity: 1;
+  transform: translateX(0); 
+}
+
+@media (max-width: 768px) { 
+    body {
+        font-size: 14px;
+    }
 }
