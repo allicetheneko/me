@@ -24,6 +24,12 @@ body {
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
 }
 
+.profile img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+
 .profile.slide-in-left {
   opacity: 1;
   transform: translateX(0); 
@@ -75,6 +81,12 @@ body {
   to {
     width: 100%;
   }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
 }
 
 .progress {
